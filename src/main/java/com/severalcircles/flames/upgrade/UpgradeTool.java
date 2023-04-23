@@ -116,19 +116,19 @@ public class UpgradeTool {
             OldDataRecord oldDataRecord = createOldDataRecord(id);
             NewDataRecord newDataRecord = new NewDataRecord(1, oldDataRecord.consent(), 0, oldDataRecord.favoriteQuote(), oldDataRecord.happyDay(), oldDataRecord.highScore(), Instant.ofEpochSecond(0), oldDataRecord.locale(), oldDataRecord.lowScore(), 0, "UNRANKED", oldDataRecord.sadDay(), (double) Math.ceil(oldDataRecord.score() / 1000));
             Properties newProperties = new Properties();
-            newProperties.setProperty("bonusMultiplier", String.valueOf(newDataRecord.bonusMultiplier()));
-            newProperties.setProperty("consent", String.valueOf(newDataRecord.consent()));
-            newProperties.setProperty("conversations", String.valueOf(newDataRecord.conversations()));
-            newProperties.setProperty("favoriteQuote", newDataRecord.favoriteQuote());
-            newProperties.setProperty("happyDay", newDataRecord.happyDay().toString());
-            newProperties.setProperty("highScore", String.valueOf(newDataRecord.highScore()));
-            newProperties.setProperty("lastBonus", newDataRecord.lastBonus().toString());
-            newProperties.setProperty("locale", newDataRecord.locale().toString());
-            newProperties.setProperty("lowScore", String.valueOf(newDataRecord.lowScore()));
-            newProperties.setProperty("messages", String.valueOf(newDataRecord.messages()));
-            newProperties.setProperty("rank", newDataRecord.rank());
-            newProperties.setProperty("sadDay", newDataRecord.sadDay().toString());
-            newProperties.setProperty("score", String.valueOf(newDataRecord.score()));
+                newProperties.setProperty("bonusMultiplier", String.valueOf(newDataRecord.bonusMultiplier()));
+                newProperties.setProperty("consent", String.valueOf(newDataRecord.consent()));
+                newProperties.setProperty("conversations", String.valueOf(newDataRecord.conversations()));
+                newProperties.setProperty("favoriteQuote", newDataRecord.favoriteQuote());
+                newProperties.setProperty("happyDay", newDataRecord.happyDay().toString());
+                newProperties.setProperty("highScore", String.valueOf(newDataRecord.highScore()));
+                newProperties.setProperty("lastBonus", newDataRecord.lastBonus().toString());
+                newProperties.setProperty("locale", newDataRecord.locale().toString());
+                newProperties.setProperty("lowScore", String.valueOf(newDataRecord.lowScore()));
+                newProperties.setProperty("messages", String.valueOf(newDataRecord.messages()));
+                newProperties.setProperty("rank", newDataRecord.rank());
+                newProperties.setProperty("sadDay", newDataRecord.sadDay().toString());
+                newProperties.setProperty("score", String.valueOf(newDataRecord.score()));
             File newFile = new File(newDir.getAbsolutePath() + "/user/" + id + ".flp");
             try {
                 if (newFile.getParentFile().mkdir())

@@ -5,7 +5,7 @@ plugins {
 
 group = 'com.severalcircles.flames.upgrade'
 mainClassName='com.severalcircles.flames.upgrade.UpgradeTool'
-version = '1.2'
+version = '1.3'
 
 repositories {
     mavenCentral()

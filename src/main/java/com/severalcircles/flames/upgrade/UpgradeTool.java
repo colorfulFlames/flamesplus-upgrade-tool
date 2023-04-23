@@ -116,11 +116,6 @@ public class UpgradeTool {
             OldDataRecord oldDataRecord = createOldDataRecord(id);
             NewDataRecord newDataRecord = new NewDataRecord(1, oldDataRecord.consent(), 0, oldDataRecord.favoriteQuote(), oldDataRecord.happyDay(), oldDataRecord.highScore(), Instant.ofEpochSecond(0), oldDataRecord.locale(), oldDataRecord.lowScore(), 0, "UNRANKED", oldDataRecord.sadDay(), (double) Math.ceil(oldDataRecord.score() / 1000));
             Properties newProperties = new Properties();
-            try {
-                newProperties.load(new FileReader(UpgradeTool.class.getResource("/user.properties").getFile()));
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
             newProperties.setProperty("bonusMultiplier", String.valueOf(newDataRecord.bonusMultiplier()));
             newProperties.setProperty("consent", String.valueOf(newDataRecord.consent()));
             newProperties.setProperty("conversations", String.valueOf(newDataRecord.conversations()));

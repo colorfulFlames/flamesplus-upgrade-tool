@@ -85,7 +85,8 @@ public class UpgradeTool {
         }
         fl.info("Found " + users + " users");
         int finalUsers1 = users.get();
-        ids.forEach((id) -> {
+        List<String> idsCopy = new LinkedList<>(ids);
+        idsCopy.forEach((id) -> {
             int finalUsers = finalUsers1;
             File user = new File(flamesDir.getAbsolutePath() + "/user/" + id);
             Properties properties = new Properties();
